@@ -13,13 +13,15 @@ class SessionController {
 
     if (!user) {
       console.log('Usuário não encontrado')
-      return res.redirect('/ ')
+      return res.redirect('/')
     }
 
     if (!(await user.checkPassword(password))) {
       console.log('Senha incorreta')
       return res.redirect('/')
     }
+
+    req.session.user = user // Salva uma informaçao chamada user com as informações do usuarios
 
     return res.redirect('/app/dashboard')
   }
