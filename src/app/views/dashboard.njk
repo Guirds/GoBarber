@@ -6,7 +6,9 @@
   <p>Inicie um agendamento escolhendo um professional abaixo:</p>
 
   <ul class="providers">
+
     {% for provider in providers %}
+
     <li class="provider">
       <div>
         <img src="/files/{{ provider.avatar }}" alt="" />
@@ -14,9 +16,12 @@
       </div>
       <a href="/app/appointments/new/{{ provider.id }}">+</a>
     </li>
+
     {% endfor %}
+
   </ul>
 
   <a href="/app/logout" class="logout">Sair</a>
 </div>
+
 {% endblock %}

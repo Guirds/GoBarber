@@ -1,10 +1,12 @@
-{% extends "_layouts/default.njk" %} {% block body %}
+{% extends "_layouts/default.njk" %}
+{% block body %}
+
 <div class="content">
   <strong>Agendando horário</strong>
 
   <div class="provider">
     <div>
-      <img src="/file/{{ provider.avatar }}" />
+      <img src="/files/{{ provider.avatar }}" />
       <strong>{{ provider.name }}</strong>
     </div>
   </div>
@@ -20,8 +22,6 @@
           <button type="submit">Agendar</button>
       </div>
     </form>
-
-
 </div>
 
   <script type="text/javascript">
@@ -37,5 +37,6 @@
       }
     });
   </script>
-  {% endblock %}
-</div>
+
+
+{% endblock %}
