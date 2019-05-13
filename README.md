@@ -1,44 +1,45 @@
-# GoBarber
-Projeto desenvolvido durante o primeiro módulo de Node.js
 
-## Necessário ter em sua máquina
-<ul>
-  <li><a href="https://nodejs.org/en/">Node.js</a> (versão LTS)</li>
-  <li>Npm (séra instalado junto com o Node.js)</li>
-</ul>
+ <img src="https://s3.us-east-2.amazonaws.com/gobarber-img/logo.svg" height = "150"/>
 
-## Executando o projeto
-<ul>
- <li>Clonar o repositório</li>
- <li>Em seu terminal você deve acessar a pasta do repositório clonado</li>
- <li>Digitar os comandos: npm install e npm start</li>
- <li>Em seguida clique: <a href="https://localhost:3000/">abrir projeto</a></li>
-</ul>
 
-## As 4 páginas do projeto
-![WhatsApp Image 2019-05-07 at 15 01 17](https://user-images.githubusercontent.com/37129994/57569937-c2339e80-73d2-11e9-9622-c2894a952158.jpeg)
+# APP GOBARBER
+- App criado no desafio 2 do módulo NodeJs no bootcamp Rocketseat
 
-## O que foi útilizados para produção
-|Dependências da aplicação          | Dependências durante Desenvolvimento|
-|-----------------------------------|-------------------------------------|
-|bcryptjs                           |Eslint                               |
-|connect-loki                       |Nodemon                              |
-|express                            |Sequelize-cli                        |
-|express-session                    |                                     |
-|moment                             |                                     |
-|multer                             |                                     |
-|nunjucks                           |                                     |
-|pg                                 |                                     |
-|sequelize                          |                                     |
-|session-file-store                 |                                     |
+  O aprendizado foi na base de rotas, como elas funcionam da maneira correta, além de criar padrões de projeto MVC, 
+  apredemos sobre o uso do nunjucks para renderizar as views.
+  
+  Além disso foi criado passo a passo o processo de autenticação e criação de usuário, por meio do uso do Sequelize para BD,
+  configurado em uma base de dados PostgresSQL, usando uma máquina virtual Docker para tal.
+  
+ ### COMO USAR:
+  É ALTAMENTE RECOMENDÁVEL O USO DO [YARN](https://yarnpkg.com/pt-BR/) e de algum terminal linux, caso você esteja com windows, você pode usar o terminal do GIT.
+  
+  - Primeiramente você precisará ter o docker instalado em sua máquina : https://www.docker.com/get-started.
+  - Crie uma conta no site do docker, e assim que instalado, logue nessa conta.
+  - Fazer a instalação do DB, pelo terminal usando `docker run --name database -p 5432:5432 -d -t kartoza/postgis`.
+  - Criar uma database com o nome "gobarber".
+  - No projeto usar `yarn install` para instalar todas as dependências do projeto.
+  - Além disso, `npx sequelize db:migrate` , para criar a base de dados.
+  - Após, executar `yarn start`.
+  
+  ### SCREENSHOTS:
+  - Tela Inicial
+  <img src="https://s3.us-east-2.amazonaws.com/gobarber-img/1.png" height = "400" width = "400" />
 
-## Erros ou alguma sugestão?
-caso tenha ocorrido algum erro não presvisto por mim ou se tiver alguma sugestão de como posso melhor em qualquer aspecto,
-sinta-se à vontade para entra em contato comigo!
-<ul>
-  <li>Gmail: gui07015@gmail.com</li>
-  <li>LinkedIn:https://www.linkedin.com/in/guilhermerdsantos/</li>
-  <li>Wpp: (48) 98500-4655</li>
-</ul>
-
-<h4> Fico feliz por ter dedicado seu tempo para acompanhar um dos projetos do qual participei! </h4>
+  -  Cadastro
+  <img src="https://s3.us-east-2.amazonaws.com/gobarber-img/Screenshot_8.png" height = "500" width = "400" />
+  
+   - Tela de escolha de profissional(User)
+  <img src="https://s3.us-east-2.amazonaws.com/gobarber-img/2.png" height = "500" width = "400" />
+  
+   - Tela de horários e profissionais e agendamento
+   <img src="https://s3.us-east-2.amazonaws.com/gobarber-img/Screenshot_5.png" height = "600" width = "400" />
+  
+   #### Telas do prestador de serviços :
+   
+   - Dashboard principal
+   <img src="https://s3.us-east-2.amazonaws.com/gobarber-img/Screenshot_9.png" height = "400" width = "400" /> 
+   
+   - Clientes do dia
+   <img src="https://s3.us-east-2.amazonaws.com/gobarber-img/Screenshot_6.png" height = "400" width = "400" /> 
+    
